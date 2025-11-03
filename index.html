@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+  body {
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  }
+  .a4page {
+  width: 55%;
+  height: 37.7cm;
+  background: white;
+  position: relative;
+  box-shadow:0 4px 6px rgba(0, 0, 0, 0.1),0 1px 3px rgba(0, 0, 0, 0.06), inset 8px 0 0 0 #23232e,inset -8px 0 0 0 #23232e;
+  display: relative;
+  justify-content: center;
+  align-items: center;
+    
+  }
+  .title_main{
+  font-size: 28px;
+  font-family:'Calibri';
+  color: aliceblue;
+  text-align: center;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  .title{
+  font-size: 21px;
+  font-family:'Calibri';
+  color: aliceblue;
+  margin-left: 74px;
+  text-align: center;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  
+  @media (max-width: 600px) {
+  .a4page {
+  width: 100vw;
+  height: calc(100vw * 29.7 / 21);
+  box-shadow:
+    inset 4px 0 0 0 #23232e,
+    inset -4px 0 0 0 #23232e; 
+  }
+   .title{
+  font-size: 8px;
+  font-family:'Calibri';
+  color: aliceblue;
+  margin-left: 25px;
+    
+  }
+    .title_main{
+  font-size: 15px;
+  font-family:'Calibri';
+  color: aliceblue;
+  margin-left: 28px;
+  background-color: #b09aca;
+  }
+}
+  .a4page img {
+  
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: relative;
+  }
+ .a4image4 {
+  position: absolute;
+  width: 100vw; 
+  height: auto;
+  max-height: 29.7cm;
+  background: white;
+  box-shadow:0 4px 6px rgba(0, 0, 0, 0.1),0 1px 3px rgba(0, 0, 0, 0.06);
+  display: block;
+  margin: 10px auto;
+  object-fit: contain;
+}
+.a4page5 {
+  width: 21cm;
+  height: 29.7cm;
+  background-image: url('import/image 25.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  
+}
+.class5{
+  height: 100%;
+  background-size:contain ;
+  position: relative;
+  background-repeat:repeat-y;
+
+}
+.class4{
+  width: 85%;
+  border-radius: 10px;
+  position: absolute;
+ 
+  }
+  .class8{width: 85%;
+  height: auto;
+  position: relative;
+  right: 50%;
+  left: 8%;
+}
+#copyPhoneBtnmail{
+position: absolute;
+  z-index: 10;
+  background-color: rgba(75, 9, 255, 0);
+  border: none;
+  top: 12.2%;
+  right: 43%;
+}
+#copyPhoneBtn{
+position: absolute;
+  z-index: 10;
+  background-color: rgba(75, 9, 255, 0);
+  border: none;
+  top: 13.9%;
+  right: 46%;
+}
+#toTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ru">
+<body>
+
+<p href="#" id="toTop">↑</p>
+<div class="a4page">
+  <button id="copyPhoneBtn"><span style="font-size: 24px;">&#x1F4CB;</span></button>
+  <button id="copyPhoneBtnmail"><span style="font-size: 24px;">&#x1F4CB;</span></button>
+  <img src="../mysite/cv/1.jpg" alt="Картинка 1" />
+</div>
+<div class="a4page">
+  <img src="../mysite/cv/4.jpg" alt="Картинка 2" />
+</div>
+<div class="a4page class5">
+  <p class="title_main"><span style="background-color:#b09aca;">ПОРТФОЛИО</span></p>
+  <p class="title" style="color:#000000;">🟪Рендеры изображений</p>
+  <div class="cloud"><div id="images-container"></div></div>
+  <p class="title" style="color:#000000;"> 🟪Рендеры Видео</p>
+  <div id="videos-container"></div>
+   <p class="title" style="color:#000000;"> 🟪Демонстрация сайта </p>
+   <p class="title" style="color:#000000;"> Информационная система учета материалов обучающих систем    </p>
+   <div id="imagessite-container"></div>
+</div>
+<script>
+  const images = [
+    "file (1).jpg", "file (2).jpg", "file (3).jpg", "file (5).jpg", "file (6).jpg", "file (7).jpg",
+    "file (13).jpg", "file (14).jpg", "file (141).jpg", "file (15).jpg",
+    "file (18).jpg",
+    "file (13).png",
+    "file (155).jpg",
+    "file (16).jpg", "file (17).jpg",
+    "file (10).png",
+    "file (9).jpg",
+    "file (3).png", "file (56).jpg",
+    "file (131).jpg",
+    "file (111).jpg",
+    "file (8).jpg",
+    "file (10).jpg", "file (11).jpg", "file (12).jpg",
+    "file (222).jpg",
+    "file (22).jpg",
+    "file (13).png",
+    "file (77).jpg",
+    "file (14).png",
+    "file (121).jpg",
+    "file (125).jpg",
+    "file (20).jpg"
+  ];
+
+  const container = document.getElementById('images-container');
+
+  images.forEach(fileName => {
+    const img = document.createElement('img');
+    img.src = 'import/' + fileName;
+    img.alt = fileName;
+    img.className = 'a4image4 class4 ';
+    container.appendChild(img);
+  });
+
+  const videos = [
+  "file (3).mp4",
+  "file (4).mp4",
+  "file (2).mp4"
+];
+
+const containervideo = document.getElementById('videos-container');
+videos.forEach(fileName => {
+  const video = document.createElement('video');
+  video.src = 'import/' + fileName;
+  video.controls = true;
+  video.className = 'a4video4 class8';  
+  video.style.maxWidth = '100%';
+  video.style.height = 'auto';
+  containervideo.appendChild(video);
+});
+
+const images_site = ["example/1121.jpg", "example/12.png", "example/13.png"];
+const containerImages = document.getElementById('imagessite-container'); 
+
+images_site.forEach(fileName => {
+  const img = document.createElement('img');
+  img.src = fileName;
+  img.className = 'class-for-images class4 a4image4'; 
+  img.style.maxWidth = '100%';
+  img.style.height = 'auto';
+  containerImages.appendChild(img);
+});
+  const phoneNumber = "+7 (904) 224-25-46";
+  const mail = "nefedov984@gmail.com";
+  document.getElementById('copyPhoneBtn').addEventListener('click', () => {
+    navigator.clipboard.writeText(phoneNumber)
+  });
+    document.getElementById('copyPhoneBtnmail').addEventListener('click', () => {
+    navigator.clipboard.writeText(mail)
+  });
+  window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("toTop").style.display = "block";
+  } else {
+    document.getElementById("toTop").style.display = "none";
+  }
+};
+
+document.getElementById("toTop").onclick = function() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+};
+</script>
+</body>
+</html>
+</body>
+</html>
